@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+/* Todas as Midías */
+
+/* Typical Device Breakpoints
+------------------------------
+Pequenas Telas: até 600px
+Celular: 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes Telas: Acima de 1200px
+*/
+
+/* Por conta do modo "Mobile First" o Media screen para celular não será necessário ser feito */
+
+/*Impressoras*/
+@media print{
+    body{
+        background-image: url(../imgs/back-print.jpg);
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone{ display: none;}
+    img#tablet{ display: none;}
+    img#print{ display: block;}
+    img#pc{ display: none;}
+    img#tv{ display: none;}
+}
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 992px){
+    body{
+        background-image: url(../imgs/back-tablet.jpg);
+    }
+
+    
+    img#phone{ display: none;}
+    img#tablet{ display: block;}
+    img#print{ display: none;}
+    img#pc{ display: none;}
+    img#tv{ display: none;}
+
+}
+/*Desktop*/
+@media screen and (min-width: 992px) and (max-width:1200px){
+    body{
+        background-image: url(../imgs/back-pc.jpg);
+    }
+
+    img#phone{ display: none;}
+    img#tablet{ display: none;}
+    img#print{ display: none;}
+    img#pc{ display: block;}
+    img#tv{ display: none;}
+}
+/*Grandes Telas*/
+@media screen and (min-width: 1200px){
+    body{
+        background-image: url(../imgs/back-tv.jpg);
+    }
+
+    img#phone{ display: none;}
+    img#tablet{ display: none;}
+    img#print{ display: none;}
+    img#pc{ display: none;}
+    img#tv{ display: block;}
+}
