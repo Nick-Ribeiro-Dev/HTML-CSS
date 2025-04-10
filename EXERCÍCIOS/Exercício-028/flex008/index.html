@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        .container{
+            display: flex;
+            background-color: lightsalmon;
+            flex-flow: row nowrap;
+        }
+
+        .item{
+            text-align: center;
+            background-color: lightblue;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            flex-basis: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Pequeno</div>
+        <div class="item">Texto moderadamente grande</div>
+        <div class="item">Texto absurdamente (e desnecessariamente) grande</div>
+        <div class="item">Tico Tico</div>
+        <div class="item">ai</div>
+        <div class="item">ta</div>
+        <div class="item">Gaaaaaa</div>
+    </div>
+</body>
+</html>
