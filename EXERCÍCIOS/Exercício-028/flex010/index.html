@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightgray;
+        }
+
+        .container{
+            display: flex;
+            background-color: lightsalmon;
+            flex-flow: row nowrap;
+        }
+
+        .item{
+            padding: 10px;
+            text-align: center;
+            background-color: lightblue;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+
+            flex-basis: 300px;
+        }
+
+        #cxA{
+            flex-shrink: 1;
+            flex-grow: 2;
+        }
+
+        #cxB{
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+
+        #cxC{
+            flex-shrink: 1;
+            flex-grow: 0;
+        }
+
+        #cxA1{
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+
+        #cxB1{
+            flex-shrink: 1;
+            flex-grow: 0;
+        }
+
+        #cxC1{
+            flex-shrink: 4;
+            flex-grow: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="cxA" class="item">Esse item crescerá duas vezes mais que o item seguinte! >:D</div>
+        <div id="cxB" class="item">Esse item vai crescer :D</div>
+        <div id="cxC" class="item">Esse item não irá crescer :C</div>
+    </div>
+    <br>
+    <div class="container">
+        <div id="cxA1" class="item">Esse item não vai diminuir</div>
+        <div id="cxB1" class="item">Esse item vai diminuir um tico</div>
+        <div id="cxC1" class="item">Esse item irá diminuir 4x mais que o item seguinte</div>
+    </div>
+</body>
+</html>
